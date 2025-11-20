@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(162, 88%, 26%); /* emerald */
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(43, 96%, 56%); /* amber */
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(262, 83%, 58%); /* violet */
+  --accent-foreground: hsl(0, 0%, 100%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --success: hsl(162, 88%, 26%);
+  --success-foreground: hsl(0, 0%, 100%);
+  --warning: hsl(32, 95%, 44%);
+  --warning-foreground: hsl(0, 0%, 100%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+  --chart-1: hsl(162, 88%, 26%); /* emerald */
+  --chart-2: hsl(43, 96%, 56%); /* amber */
+  --chart-3: hsl(262, 83%, 58%); /* violet */
+  --chart-4: hsl(0, 84.2%, 60.2%); /* red */
+  --chart-5: hsl(201, 96%, 32%); /* cyan */
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(162, 88%, 26%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(43, 96%, 56%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(262, 83%, 58%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --success: hsl(162, 88%, 26%);
+  --success-foreground: hsl(0, 0%, 100%);
+  --warning: hsl(32, 95%, 44%);
+  --warning-foreground: hsl(0, 0%, 100%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-gradient-to-br from-emerald-50 to-amber-50 dark:from-gray-900 dark:to-gray-800 text-foreground min-h-screen;
+  }
+}
+
+@layer components {
+  .card-modern {
+    @apply bg-white/70 dark:bg-gray-900/70 backdrop-blur-sm border border-white/20 dark:border-gray-700/50 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300;
+  }
+  
+  .sidebar-gradient {
+    @apply bg-gradient-to-b from-emerald-500 to-emerald-700 dark:from-emerald-700 dark:to-emerald-800;
+  }
+  
+  .input-modern {
+    @apply bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm border-gray-200 dark:border-gray-600 focus:border-emerald-500 dark:focus:border-emerald-400 transition-colors;
+  }
+}
+
+/* Custom utility classes */
+.success {
+  @apply text-emerald-600;
+}
+
+.error {
+  @apply text-red-600;
+}
+
+.warning {
+  @apply text-amber-600;
+}
+
+.bg-success {
+  @apply bg-emerald-600;
+}
+
+.bg-error {
+  @apply bg-red-600;
+}
+
+.bg-warning {
+  @apply bg-amber-600;
+}
+
+.text-success {
+  @apply text-emerald-600;
+}
+
+.text-error {
+  @apply text-red-600;
+}
+
+.text-warning {
+  @apply text-amber-600;
+}
+
+.bg-success-100 {
+  @apply bg-emerald-100;
+}
+
+.bg-error-100 {
+  @apply bg-red-100;
+}
+
+.bg-warning-100 {
+  @apply bg-amber-100;
+}
